@@ -1,7 +1,6 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 #include "posrednik.h"
-#include "enemy.h"
 #include "bullet.h"
 class Player
 {
@@ -16,7 +15,7 @@ public:
 
     Player(Texture *texture)
     {
-        this->HPMax = 10;
+        this->HPMax = 1;
         this->HP = this->HPMax;
 
         this->texture = texture;
