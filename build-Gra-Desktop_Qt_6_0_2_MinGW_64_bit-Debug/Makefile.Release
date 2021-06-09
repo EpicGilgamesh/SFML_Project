@@ -61,18 +61,43 @@ DIST          = ../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/Font/slkscreb.t
 		of \
 		swing \
 		8-bit.mp3 \
+		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/snd/bossmusic.wav \
+		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/snd/explosion.wav \
+		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/snd/gameover.wav \
+		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/snd/laser.wav \
+		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/snd/shot1.wav \
+		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/snd/shot2.wav \
+		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/snd/theme.wav \
+		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/snd/win.wav \
+		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/asteroid-small.png \
+		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/asteroid.png \
+		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/asteroidabum.png \
+		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/boss.png \
+		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/bossbullet.png \
+		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/bossbum.png \
+		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/crossed.png \
 		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/enemy1.png \
+		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/enemybum.png \
+		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/graczbum.png \
+		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/graczbum2.png \
+		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/loading.png \
+		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/menuback.png \
 		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/moon.png \
 		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/player1.png \
+		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/player2.png \
 		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/playerdown.png \
+		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/playerdown2.png \
 		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/playerup.png \
+		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/playerup2.png \
 		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/pulse1.png \
+		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/pulse2.png \
+		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/space2.png \
 		../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/space.png assets.h \
-		background.h \
+		beings.h \
 		bullet.h \
-		enemy.h \
-		player.h \
-		posrednik.h ..\Gra\main.cpp
+		game.h \
+		posrednik.h \
+		shooting.h ..\Gra\main.cpp
 QMAKE_TARGET  = Gra
 DESTDIR        = release\ #avoid trailing-slash linebreak
 TARGET         = Gra.exe
@@ -195,11 +220,27 @@ release/main.o: ../Gra/main.cpp ../Gra/posrednik.h \
 		C:/Qt/SFML-2.5.1/include/SFML/Graphics/Sprite.hpp \
 		C:/Qt/SFML-2.5.1/include/SFML/Graphics/Text.hpp \
 		C:/Qt/SFML-2.5.1/include/SFML/Graphics/VertexBuffer.hpp \
-		../Gra/player.h \
-		../Gra/enemy.h \
+		C:/Qt/SFML-2.5.1/include/SFML/Audio.hpp \
+		C:/Qt/SFML-2.5.1/include/SFML/Audio/InputSoundFile.hpp \
+		C:/Qt/SFML-2.5.1/include/SFML/Audio/Export.hpp \
+		C:/Qt/SFML-2.5.1/include/SFML/Audio/Listener.hpp \
+		C:/Qt/SFML-2.5.1/include/SFML/Audio/Music.hpp \
+		C:/Qt/SFML-2.5.1/include/SFML/Audio/SoundStream.hpp \
+		C:/Qt/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp \
+		C:/Qt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp \
+		C:/Qt/SFML-2.5.1/include/SFML/Audio/OutputSoundFile.hpp \
+		C:/Qt/SFML-2.5.1/include/SFML/Audio/Sound.hpp \
+		C:/Qt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp \
+		C:/Qt/SFML-2.5.1/include/SFML/Audio/SoundBufferRecorder.hpp \
+		C:/Qt/SFML-2.5.1/include/SFML/Audio/SoundRecorder.hpp \
+		C:/Qt/SFML-2.5.1/include/SFML/Audio/SoundFileFactory.hpp \
+		C:/Qt/SFML-2.5.1/include/SFML/Audio/SoundFileFactory.inl \
+		C:/Qt/SFML-2.5.1/include/SFML/Audio/SoundFileReader.hpp \
+		C:/Qt/SFML-2.5.1/include/SFML/Audio/SoundFileWriter.hpp \
+		../Gra/beings.h \
 		../Gra/bullet.h \
 		../Gra/assets.h \
-		../Gra/Background.h
+		../Gra/shooting.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\Gra\main.cpp
 
 ####### Install
