@@ -17,10 +17,12 @@ protected:
 
 
 
+
 public:
     bool dead=0;
     Sprite shape;
     Text HPtext;
+
 
 //    virtual void death(Texture *texture, Vector2f pos,Sound explosionsound)
 //    {
@@ -47,6 +49,10 @@ public:
     virtual void damage()
     {
         HP--;
+    }
+    virtual void heal()
+    {
+        HP=HP+rand()%(HPMax-HP)+1;
     }
     virtual bool alive()
     {
@@ -114,8 +120,8 @@ public:
         this->HPtext.setString(std::to_string(this->HP) + "/" + std::to_string(this->HPMax));
         window.draw(HPtext);
     }
-
-    void moves(Texture *playerTex,Texture *playerTexDown,Texture *playerTexUp)
+//virtual
+    void moves(Texture *playerTex,Texture *playerTexDown,Texture *playerTexUp)///override
     {   this->shape.setTexture(*playerTex);
         if (Keyboard::isKeyPressed(Keyboard::W))
         { shape.move(0.f, -10.f);
@@ -223,7 +229,7 @@ public:
     Boss(Texture *texture, Vector2u windowSize)
     {
         this->shoottime=20;
-        this->HPMax =50;
+        this->HPMax =30;
         this->HP = this->HPMax;
 
         this->shape.setTexture(*texture);
@@ -261,13 +267,14 @@ public:
         this->HPtext.setFont(font);
         this->HPtext.setCharacterSize(12);
         this->HPtext.setFillColor(Color::White);
+      //  this->shape.setRotation(0.4f);
 
     }
 
     void moves()
     {
         this->shape.move(-3.f, 0.f);
-        this->shape.rotate(0.1f);
+        this->shape.rotate(0.4f);
 
     }
 
@@ -275,6 +282,21 @@ public:
     {
 
     }
+};
+class Healthbag:public Asteroid
+{
+public:
+    Healthbag (Texture *texture, Vector2u windowSize):Asteroid(texture,windowSize)
+    {
+this->shape.setScale(1.f,1.f);
+    }
+   // using Asteroid::Asteroid;
+
+
+
+    ~Healthbag()
+    {}
+
 };
 
 #endif // BEINGS_H

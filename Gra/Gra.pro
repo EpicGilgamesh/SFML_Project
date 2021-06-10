@@ -33,6 +33,7 @@ DISTFILES += \
     ../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/snd/shot2.wav \
     ../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/snd/theme.wav \
     ../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/snd/win.wav \
+    ../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/HP.png \
     ../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/asteroid-small.png \
     ../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/asteroid.png \
     ../build-Gra-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/tex/asteroidabum.png \

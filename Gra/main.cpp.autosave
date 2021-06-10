@@ -4,9 +4,12 @@
 #include "assets.h"
 #include "shooting.h"
 
-
+//// Chciałem jeszcze dodać że pisząc ten projekt wzorowałem się na tym co było na 1 semestrze u dr Kołoty, gdzie poprostu w VS
+/// w interfejsie graficznym dostarczaliśmy projekt "grę", gdzie liczyło się wykorzystanie wiedzy pozyskanej na zajęciach z mniejszym naciskiem, np.
+/// na wirtualizację( miała wystąpić dla przykładu, że potrafimy ją stosować, ale nie musiała być wszędzie). Ten projekt po pierwszo-semestrowym jest w zasadzie 
+/// moim drug
 ///TO DO
-/// virtualisation(1object methods-bullets), new weapons if, fix hitboxes,death explosions for players
+/// virtualisation(object methods-bullets), new weapons?, fix hitboxes,death explosions for players
 
 
 int main()

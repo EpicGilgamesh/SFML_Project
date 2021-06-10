@@ -12,7 +12,7 @@ Sprite shape;
     {
         this->shape.setTexture(*texture);
 
-        this->shape.setScale(2.f, 2.f);
+        this->shape.setScale(1.5f, 1.5f);
 
         this->shape.setPosition(pos);
     }

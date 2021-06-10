@@ -12,10 +12,12 @@ float enemyrotation=0;
 float bossrotation=0;
 float bulletanim=0;
 float bulletanim2=0;
-float bossbulletanim=0;
-
-
-float enemydeathanim=22;
+float bossbulletanim=15;
+float enemydeathanim=11;
+float bossdeathanim=11;
+float playerdeathanim=11;
+float hitanim=11;
+float asteroiddeathanim=11;
 float moonanim=0;
 float mapanim=200;
 float loadanim=0;
@@ -33,6 +35,7 @@ int score = 0;
 int start=2;
 int przejscie=0;
 int enemySpawnTimer = 0;
+int hpSpawnTimer = 0;
 int asteroidSpawnTimer = 0;
 int bossloading=0;
 ///fonts
@@ -99,7 +102,8 @@ enum class Textures
     bossexpTex,
     enemyexpTex,
     graczexpTex,
-    hitexpTex
+    hitexpTex,
+    HPTex
 };
 class Texturesinit
 {
